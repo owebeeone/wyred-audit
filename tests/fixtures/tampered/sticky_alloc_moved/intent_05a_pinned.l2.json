@@ -1,0 +1,280 @@
+{
+  "components": [
+    {
+      "attrs": {
+        "l1_role": "supply",
+        "voltage": 3.3
+      },
+      "authored": true,
+      "kind": "source",
+      "logic_fn": null,
+      "refdes": "PS1",
+      "terminals": [
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "VOUT",
+          "prov_v": 3.3,
+          "req_v": null,
+          "role": "power_out"
+        },
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "GND",
+          "prov_v": null,
+          "req_v": null,
+          "role": "ground"
+        }
+      ],
+      "value": "SRC-3.3V"
+    },
+    {
+      "attrs": {
+        "l1_role": "mcu"
+      },
+      "authored": true,
+      "kind": "mcu",
+      "logic_fn": null,
+      "refdes": "U1",
+      "terminals": [
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "VDD",
+          "prov_v": null,
+          "req_v": 3.3,
+          "role": "power_in"
+        },
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "GND",
+          "prov_v": null,
+          "req_v": null,
+          "role": "ground"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "provide",
+          "name": "U0_TX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "provide",
+          "name": "U0_RX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "provide",
+          "name": "U1_TX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "provide",
+          "name": "U1_RX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "provide",
+          "name": "U2_TX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "provide",
+          "name": "U2_RX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        }
+      ],
+      "value": "MCU-3UART"
+    },
+    {
+      "attrs": {
+        "l1_role": "periph"
+      },
+      "authored": true,
+      "kind": "uart_device",
+      "logic_fn": null,
+      "refdes": "U2",
+      "terminals": [
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "VDD",
+          "prov_v": null,
+          "req_v": 3.3,
+          "role": "power_in"
+        },
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "GND",
+          "prov_v": null,
+          "req_v": null,
+          "role": "ground"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "require",
+          "name": "TX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "iface": "uart",
+          "iface_member": "require",
+          "name": "RX",
+          "prov_v": null,
+          "req_v": null,
+          "role": "signal"
+        }
+      ],
+      "value": "uart-peripheral"
+    },
+    {
+      "attrs": {
+        "derived": "decoupling for mcu.pwr",
+        "for_demand": "mcu.pwr"
+      },
+      "authored": false,
+      "kind": "capacitor",
+      "logic_fn": null,
+      "refdes": "C1",
+      "terminals": [
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "1",
+          "prov_v": null,
+          "req_v": null,
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "iface": null,
+          "iface_member": null,
+          "name": "2",
+          "prov_v": null,
+          "req_v": null,
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    }
+  ],
+  "escalations": [],
+  "invariants": [],
+  "nets": [
+    {
+      "ground_kind": "ground",
+      "ground_role": "none",
+      "kind": "ground",
+      "name": "GND",
+      "nodes": [
+        [
+          "PS1",
+          "GND"
+        ],
+        [
+          "U1",
+          "GND"
+        ],
+        [
+          "C1",
+          "2"
+        ],
+        [
+          "U2",
+          "GND"
+        ]
+      ],
+      "voltage": 0.0
+    },
+    {
+      "kind": "power",
+      "name": "+3V3",
+      "nodes": [
+        [
+          "PS1",
+          "VOUT"
+        ],
+        [
+          "U1",
+          "VDD"
+        ],
+        [
+          "C1",
+          "1"
+        ],
+        [
+          "U2",
+          "VDD"
+        ]
+      ],
+      "voltage": 3.3
+    },
+    {
+      "kind": "signal",
+      "name": "periph.uart.0.rx",
+      "nodes": [
+        [
+          "U1",
+          "U2_RX"
+        ],
+        [
+          "U2",
+          "TX"
+        ]
+      ],
+      "voltage": null
+    },
+    {
+      "kind": "signal",
+      "name": "periph.uart.0.tx",
+      "nodes": [
+        [
+          "U1",
+          "U2_TX"
+        ],
+        [
+          "U2",
+          "RX"
+        ]
+      ],
+      "voltage": null
+    }
+  ]
+}

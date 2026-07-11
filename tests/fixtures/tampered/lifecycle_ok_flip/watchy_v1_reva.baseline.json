@@ -1,0 +1,390 @@
+{
+  "connector_pinout": [
+    {
+      "connector": "J1",
+      "function": "BAT+",
+      "locked_by": "external-interface@1",
+      "net": "+BATT",
+      "pin": "1"
+    },
+    {
+      "connector": "J1",
+      "function": "BAT-",
+      "locked_by": "external-interface@1",
+      "net": "GND",
+      "pin": "2"
+    },
+    {
+      "connector": "J1",
+      "function": "MP",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "3"
+    },
+    {
+      "connector": "J1",
+      "function": "MP",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "4"
+    },
+    {
+      "connector": "J2",
+      "function": "VBUS",
+      "locked_by": "external-interface@1",
+      "net": "VBUS",
+      "pin": "1"
+    },
+    {
+      "connector": "J2",
+      "function": "D-",
+      "locked_by": "external-interface@1",
+      "net": "usb.DN",
+      "pin": "2"
+    },
+    {
+      "connector": "J2",
+      "function": "D+",
+      "locked_by": "external-interface@1",
+      "net": "usb.DP",
+      "pin": "3"
+    },
+    {
+      "connector": "J2",
+      "function": "ID",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "4"
+    },
+    {
+      "connector": "J2",
+      "function": "GND",
+      "locked_by": "external-interface@1",
+      "net": "GND",
+      "pin": "5"
+    },
+    {
+      "connector": "J2",
+      "function": "Shield",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "6"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_1",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "1"
+    },
+    {
+      "connector": "J3",
+      "function": "RES#",
+      "locked_by": "external-interface@1",
+      "net": "display.res.0.io",
+      "pin": "10"
+    },
+    {
+      "connector": "J3",
+      "function": "D/C#",
+      "locked_by": "external-interface@1",
+      "net": "display.dc.0.io",
+      "pin": "11"
+    },
+    {
+      "connector": "J3",
+      "function": "CS#",
+      "locked_by": "external-interface@1",
+      "net": "display.cs.0.io",
+      "pin": "12"
+    },
+    {
+      "connector": "J3",
+      "function": "SCLK",
+      "locked_by": "external-interface@1",
+      "net": "display.sck.0.io",
+      "pin": "13"
+    },
+    {
+      "connector": "J3",
+      "function": "SDIN",
+      "locked_by": "external-interface@1",
+      "net": "display.mosi.0.io",
+      "pin": "14"
+    },
+    {
+      "connector": "J3",
+      "function": "VDDIO",
+      "locked_by": "external-interface@1",
+      "net": "+3V3",
+      "pin": "15"
+    },
+    {
+      "connector": "J3",
+      "function": "VDD",
+      "locked_by": "external-interface@1",
+      "net": "+3V3",
+      "pin": "16"
+    },
+    {
+      "connector": "J3",
+      "function": "GND",
+      "locked_by": "external-interface@1",
+      "net": "GND",
+      "pin": "17"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_18",
+      "locked_by": "external-interface@1",
+      "net": "display.PANEL_18",
+      "pin": "18"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_19",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "19"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_2",
+      "locked_by": "external-interface@1",
+      "net": "display.GDR",
+      "pin": "2"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_20",
+      "locked_by": "external-interface@1",
+      "net": "display.PANEL_20",
+      "pin": "20"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_21",
+      "locked_by": "external-interface@1",
+      "net": "display.PREVGH",
+      "pin": "21"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_22",
+      "locked_by": "external-interface@1",
+      "net": "display.PANEL_22",
+      "pin": "22"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_23",
+      "locked_by": "external-interface@1",
+      "net": "display.PREVGL",
+      "pin": "23"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_24",
+      "locked_by": "external-interface@1",
+      "net": "display.PANEL_24",
+      "pin": "24"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_3",
+      "locked_by": "external-interface@1",
+      "net": "display.RESE",
+      "pin": "3"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_4",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "4"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_5",
+      "locked_by": "external-interface@1",
+      "net": "display.PANEL_5",
+      "pin": "5"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_6",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "6"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_7",
+      "locked_by": "external-interface@1",
+      "net": null,
+      "pin": "7"
+    },
+    {
+      "connector": "J3",
+      "function": "GND",
+      "locked_by": "external-interface@1",
+      "net": "GND",
+      "pin": "8"
+    },
+    {
+      "connector": "J3",
+      "function": "BUSY",
+      "locked_by": "external-interface@1",
+      "net": "display.busy.0.io",
+      "pin": "9"
+    }
+  ],
+  "groups": {
+    "external-interface": {
+      "covers": [
+        "connector_pinout"
+      ],
+      "entries": [],
+      "version": 1
+    },
+    "firmware-facing": {
+      "covers": [
+        "pin_map",
+        "pool_allocation"
+      ],
+      "entries": [
+        {
+          "chosen_by": "author",
+          "demand": "btns.btn3",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 0
+        },
+        {
+          "chosen_by": "author",
+          "demand": "btns.btn2",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 6
+        },
+        {
+          "chosen_by": "author",
+          "demand": "btns.btn1",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 7
+        },
+        {
+          "chosen_by": "author",
+          "demand": "btns.btn4",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 8
+        },
+        {
+          "chosen_by": "author",
+          "demand": "vsense.tap",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 9
+        },
+        {
+          "chosen_by": "author",
+          "demand": "charger.stat",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 10
+        },
+        {
+          "chosen_by": "author",
+          "demand": "accel.int2",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 11
+        },
+        {
+          "chosen_by": "author",
+          "demand": "accel.int1",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 12
+        },
+        {
+          "chosen_by": "author",
+          "demand": "motor.pwm",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 13
+        },
+        {
+          "chosen_by": "author",
+          "demand": "usb.det",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 15
+        },
+        {
+          "chosen_by": "author",
+          "demand": "display.mosi",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 23
+        },
+        {
+          "chosen_by": "author",
+          "demand": "display.sck",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 24
+        },
+        {
+          "chosen_by": "author",
+          "demand": "display.cs",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 25
+        },
+        {
+          "chosen_by": "author",
+          "demand": "display.dc",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 26
+        },
+        {
+          "chosen_by": "author",
+          "demand": "display.res",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 27
+        },
+        {
+          "chosen_by": "author",
+          "demand": "display.busy",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.gpios",
+          "state": "pinned",
+          "unit": 28
+        }
+      ],
+      "version": 1
+    }
+  },
+  "series": "A",
+  "solver_version": "ga019-trivial-1"
+}

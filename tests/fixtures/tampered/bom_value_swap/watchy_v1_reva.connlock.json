@@ -1,0 +1,16 @@
+{
+  "artifact": "watchy_v1_reva",
+  "gate_clean": [],
+  "groups": [
+    "external-interface"
+  ],
+  "ok": true,
+  "rows": 34,
+  "tamper_net_codes": [
+    "CONNECTOR_LOCK_VIOLATION"
+  ],
+  "tamper_series_codes": [
+    "CONNECTOR_SERIES_UNJUSTIFIED"
+  ],
+  "unlocked_rows": []
+}

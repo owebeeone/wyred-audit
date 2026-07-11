@@ -1,0 +1,582 @@
+{
+  "artifact": "watchy_v1_reva",
+  "authored_total": 26,
+  "component_total": 82,
+  "generated_total": 56,
+  "line_items": [
+    {
+      "authored": true,
+      "kind": "antenna",
+      "qty": 1,
+      "refdes": [
+        "AE1"
+      ],
+      "value": "Antenna_Chip"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C11": "battery ADC sense divider 100K/360K + filter (board values): filter",
+        "C12": "VBUS decoupling (board value)",
+        "C13": "ESP32-S3 application circuit: VDD_SPI decoupling",
+        "C14": "low-side NPN motor driver (board reference design): motor snubber",
+        "C5": "ESP32-S3 application circuit: VDD3P3 decoupling",
+        "C6": "ESP32-S3 application circuit: VDD3P3 decoupling"
+      },
+      "kind": "capacitor",
+      "qty": 6,
+      "refdes": [
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C5",
+        "C6"
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C1": "BMA423 supply bulk (board value)",
+        "C10": "ESP32-S3 application circuit: 3V3 bulk"
+      },
+      "kind": "capacitor",
+      "qty": 2,
+      "refdes": [
+        "C1",
+        "C10"
+      ],
+      "value": "10uF"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C17": "32.768kHz crystal load cap (board value)",
+        "C18": "32.768kHz crystal load cap (board value)"
+      },
+      "kind": "capacitor",
+      "qty": 2,
+      "refdes": [
+        "C17",
+        "C18"
+      ],
+      "value": "18pF"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C15": "ESP32-S3 application circuit: VDD_SPI decoupling",
+        "C2": "ESP32-S3 application circuit: CHIP_PU reset delay",
+        "C3": "ESP32-S3 application circuit: VDD3P3 decoupling",
+        "C4": "ESP32-S3 application circuit: VDD3P3 decoupling"
+      },
+      "kind": "capacitor",
+      "qty": 4,
+      "refdes": [
+        "C15",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "value": "1uF"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C22": "e-paper gate-drive boost (panel reference design): PREVGH reservoir",
+        "C23": "panel VCOM/driver cap (pin 5)",
+        "C24": "panel driver cap (pin 18)",
+        "C25": "panel driver cap (pin 20)",
+        "C26": "panel driver cap (pin 22)",
+        "C27": "panel driver cap (pin 24)",
+        "C28": "panel supply decoupling",
+        "C29": "e-paper gate-drive boost (panel reference design): PREVGL reservoir"
+      },
+      "kind": "capacitor",
+      "qty": 8,
+      "refdes": [
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C29"
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C16": "40MHz crystal load cap (board value)",
+        "C19": "40MHz crystal load cap (board value)"
+      },
+      "kind": "capacitor",
+      "qty": 2,
+      "refdes": [
+        "C16",
+        "C19"
+      ],
+      "value": "22pF"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C20": "e-paper gate-drive boost (panel reference design): input bulk",
+        "C21": "e-paper gate-drive boost (panel reference design): flying cap"
+      },
+      "kind": "capacitor",
+      "qty": 2,
+      "refdes": [
+        "C20",
+        "C21"
+      ],
+      "value": "4.7uF/50V"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "C7": "RF pi matching network (board: values TBD)",
+        "C9": "RF pi matching network (board: values TBD)"
+      },
+      "kind": "capacitor",
+      "qty": 2,
+      "refdes": [
+        "C7",
+        "C9"
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": true,
+      "kind": "charger",
+      "qty": 1,
+      "refdes": [
+        "U3"
+      ],
+      "value": "TP4054"
+    },
+    {
+      "authored": true,
+      "kind": "connector",
+      "qty": 1,
+      "refdes": [
+        "J1"
+      ],
+      "value": "Battery"
+    },
+    {
+      "authored": true,
+      "kind": "connector",
+      "qty": 1,
+      "refdes": [
+        "J3"
+      ],
+      "value": "FPC24(0.5MM)"
+    },
+    {
+      "authored": true,
+      "kind": "connector",
+      "qty": 1,
+      "refdes": [
+        "J2"
+      ],
+      "value": "Micro USB"
+    },
+    {
+      "authored": true,
+      "kind": "crystal",
+      "qty": 1,
+      "refdes": [
+        "Y1"
+      ],
+      "value": "32.768KHz"
+    },
+    {
+      "authored": true,
+      "kind": "crystal",
+      "qty": 1,
+      "refdes": [
+        "Y2"
+      ],
+      "value": "40MHz"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "D2": "low-side NPN motor driver (board reference design): flyback clamp"
+      },
+      "kind": "diode",
+      "qty": 1,
+      "refdes": [
+        "D2"
+      ],
+      "value": "1N4001"
+    },
+    {
+      "authored": true,
+      "kind": "diode",
+      "qty": 1,
+      "refdes": [
+        "D1"
+      ],
+      "value": "MBR0530"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "D3": "e-paper gate-drive boost (panel reference design): PREVGL rectifier",
+        "D4": "e-paper gate-drive boost (panel reference design): negative-rail clamp",
+        "D5": "e-paper gate-drive boost (panel reference design): PREVGH rectifier"
+      },
+      "kind": "diode",
+      "qty": 3,
+      "refdes": [
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "value": "MBR0530"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "L2": "e-paper gate-drive boost (panel reference design): boost inductor"
+      },
+      "kind": "inductor",
+      "qty": 1,
+      "refdes": [
+        "L2"
+      ],
+      "value": "47uH 0.5A"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "L1": "RF pi matching network (board: values TBD)"
+      },
+      "kind": "inductor",
+      "qty": 1,
+      "refdes": [
+        "L1"
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": true,
+      "kind": "ldo",
+      "qty": 1,
+      "refdes": [
+        "U2"
+      ],
+      "value": "RT908033"
+    },
+    {
+      "authored": true,
+      "kind": "mcu",
+      "qty": 1,
+      "refdes": [
+        "U4"
+      ],
+      "value": "ESP32-S3"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "Q3": "e-paper gate-drive boost (panel reference design): switch FET"
+      },
+      "kind": "mosfet",
+      "qty": 1,
+      "refdes": [
+        "Q3"
+      ],
+      "value": "AO3400A"
+    },
+    {
+      "authored": true,
+      "kind": "mosfet",
+      "qty": 1,
+      "refdes": [
+        "Q1"
+      ],
+      "value": "CJ2301"
+    },
+    {
+      "authored": true,
+      "kind": "motor",
+      "qty": 1,
+      "refdes": [
+        "M1"
+      ],
+      "value": "Vibration_Motor"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R10": "button pull-up to 3V3 (board value)",
+        "R11": "button pull-up to 3V3 (board value)",
+        "R15": "VBUS-detect divider 51K/100K (board values)",
+        "R19": "panel RES# pull-up (board value)",
+        "R2": "VBUS bleed (board value)",
+        "R4": "button pull-up to 3V3 (board value)",
+        "R6": "TP4054 application circuit: STAT level divider (series)",
+        "R7": "button pull-up to 3V3 (board value)",
+        "R8": "battery ADC sense divider 100K/360K + filter (board values)"
+      },
+      "kind": "resistor",
+      "qty": 9,
+      "refdes": [
+        "R10",
+        "R11",
+        "R15",
+        "R19",
+        "R2",
+        "R4",
+        "R6",
+        "R7",
+        "R8"
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R1": "ESP32-S3 application circuit: CHIP_PU pull-up",
+        "R18": "I2C bus pull-up (SDA), 3V3 logic",
+        "R20": "I2C bus pull-up (SCL), 3V3 logic",
+        "R3": "TP4054 application circuit: PROG charge-current set"
+      },
+      "kind": "resistor",
+      "qty": 4,
+      "refdes": [
+        "R1",
+        "R18",
+        "R20",
+        "R3"
+      ],
+      "value": "10K"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R13": "low-side NPN motor driver (board reference design): base resistor"
+      },
+      "kind": "resistor",
+      "qty": 1,
+      "refdes": [
+        "R13"
+      ],
+      "value": "1K"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R16": "e-paper gate-drive boost (panel reference design): GDR bleed"
+      },
+      "kind": "resistor",
+      "qty": 1,
+      "refdes": [
+        "R16"
+      ],
+      "value": "1M"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R17": "e-paper gate-drive boost (panel reference design): RESE current sense"
+      },
+      "kind": "resistor",
+      "qty": 1,
+      "refdes": [
+        "R17"
+      ],
+      "value": "2.2"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R9": "battery ADC sense divider 100K/360K + filter (board values)"
+      },
+      "kind": "resistor",
+      "qty": 1,
+      "refdes": [
+        "R9"
+      ],
+      "value": "360K"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R14": "VBUS-detect divider 51K/100K (board values)",
+        "R5": "TP4054 application circuit: STAT level divider (to VBUS)"
+      },
+      "kind": "resistor",
+      "qty": 2,
+      "refdes": [
+        "R14",
+        "R5"
+      ],
+      "value": "51K"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "R12": "XTAL_P series damping (board: value TBD)"
+      },
+      "kind": "resistor",
+      "qty": 1,
+      "refdes": [
+        "R12"
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": true,
+      "kind": "sensor",
+      "qty": 1,
+      "refdes": [
+        "U6"
+      ],
+      "value": "BMA423"
+    },
+    {
+      "authored": true,
+      "kind": "supervisor",
+      "qty": 1,
+      "refdes": [
+        "U1"
+      ],
+      "value": "SR2HARU"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "qty": 1,
+      "refdes": [
+        "SW2"
+      ],
+      "value": "BTN1"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "qty": 1,
+      "refdes": [
+        "SW1"
+      ],
+      "value": "BTN2"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "qty": 1,
+      "refdes": [
+        "SW3"
+      ],
+      "value": "BTN3"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "qty": 1,
+      "refdes": [
+        "SW4"
+      ],
+      "value": "BTN4"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP4"
+      ],
+      "value": "3V3"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP3"
+      ],
+      "value": "BOOT"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP5"
+      ],
+      "value": "GND"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP2"
+      ],
+      "value": "RX"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP6"
+      ],
+      "value": "SCL"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP7"
+      ],
+      "value": "SDA"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "qty": 1,
+      "refdes": [
+        "TP1"
+      ],
+      "value": "TX"
+    },
+    {
+      "authored": false,
+      "derived": {
+        "Q2": "low-side NPN motor driver (board reference design): switch"
+      },
+      "kind": "transistor",
+      "qty": 1,
+      "refdes": [
+        "Q2"
+      ],
+      "value": "S8050"
+    },
+    {
+      "authored": true,
+      "kind": "usb_protection",
+      "qty": 1,
+      "refdes": [
+        "U5"
+      ],
+      "value": "USBLC6-2P6"
+    }
+  ],
+  "path": "bom",
+  "stamp": {
+    "locks": {
+      "external-interface": 1,
+      "firmware-facing": 1
+    },
+    "series": "A"
+  }
+}

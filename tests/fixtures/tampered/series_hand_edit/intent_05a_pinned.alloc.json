@@ -1,0 +1,83 @@
+{
+  "allocation": {
+    "entries": [
+      {
+        "chosen_by": "author",
+        "demand": "periph.uart",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.uarts",
+        "state": "pinned",
+        "unit": 2
+      }
+    ],
+    "lock_groups": [
+      {
+        "covers": [
+          "pool_allocation",
+          "pin_map"
+        ],
+        "name": "firmware-facing",
+        "owner": "fw-team",
+        "snapshot": [
+          {
+            "chosen_by": "author",
+            "demand": "periph.uart",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.uarts",
+            "state": "pinned",
+            "unit": 2
+          }
+        ],
+        "sync_point": "firmware-freeze",
+        "version": 1
+      }
+    ],
+    "solver_version": "ga019-trivial-1"
+  },
+  "bindings": {
+    "mcu": "U1",
+    "periph": "U2",
+    "supply": "PS1"
+  },
+  "bound_parts": {
+    "mcu": [
+      {
+        "chosen_by": "author",
+        "part": "MCU-3UART",
+        "refdes": "U1"
+      }
+    ],
+    "periph": [
+      {
+        "chosen_by": "author",
+        "part": "uart-peripheral",
+        "refdes": "U2"
+      }
+    ],
+    "supply": [
+      {
+        "chosen_by": "solver",
+        "part": "SRC-3.3V",
+        "refdes": "PS1"
+      }
+    ]
+  },
+  "connector_pinout": [],
+  "series": "A",
+  "solver_version": "ga019-trivial-1",
+  "stamp": {
+    "locks": {
+      "firmware-facing": 1
+    },
+    "series": "A"
+  },
+  "wiring": [
+    {
+      "demand": "periph.uart",
+      "net": "periph.uart.0.rx",
+      "node": "U1.U2_RX",
+      "pool": "mcu.uarts",
+      "unit": 2
+    }
+  ]
+}

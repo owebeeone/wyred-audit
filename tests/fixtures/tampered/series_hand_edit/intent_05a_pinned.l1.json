@@ -1,0 +1,118 @@
+{
+  "allocation": {
+    "entries": [
+      {
+        "chosen_by": "author",
+        "demand": "periph.uart",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.uarts",
+        "state": "pinned",
+        "unit": 2
+      }
+    ],
+    "lock_groups": [
+      {
+        "covers": [
+          "pool_allocation",
+          "pin_map"
+        ],
+        "name": "firmware-facing",
+        "owner": "fw-team",
+        "snapshot": [
+          {
+            "chosen_by": "author",
+            "demand": "periph.uart",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.uarts",
+            "state": "pinned",
+            "unit": 2
+          }
+        ],
+        "sync_point": "firmware-freeze",
+        "version": 1
+      }
+    ],
+    "solver_version": "ga019-trivial-1"
+  },
+  "attrs": {
+    "pool_spares": {
+      "mcu.uarts": [
+        0,
+        1
+      ]
+    },
+    "resolutions": {
+      "mcu.pwr": "rail:+3V3",
+      "periph.pwr": "rail:+3V3"
+    }
+  },
+  "grounds": [
+    {
+      "name": "GND"
+    }
+  ],
+  "layer": 1,
+  "pools": [
+    {
+      "name": "mcu.uarts",
+      "port_signature": [
+        "tx:out",
+        "rx:in"
+      ],
+      "provides": "uart",
+      "role": "mcu",
+      "unit_count": 3
+    }
+  ],
+  "rails": [
+    {
+      "name": "+3V3",
+      "volts": 3.3
+    }
+  ],
+  "roles": [
+    {
+      "capabilities": [
+        {
+          "iface": "power",
+          "rail": "+3V3",
+          "volts": 3.3
+        }
+      ],
+      "id": "supply",
+      "kind": "supply"
+    },
+    {
+      "demands": [
+        {
+          "attrs": {
+            "companions": [
+              "decoupling_cap"
+            ]
+          },
+          "id": "mcu.pwr",
+          "iface": "power",
+          "volts": 3.3
+        }
+      ],
+      "id": "mcu",
+      "kind": "mcu"
+    },
+    {
+      "demands": [
+        {
+          "id": "periph.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "id": "periph.uart",
+          "iface": "uart"
+        }
+      ],
+      "id": "periph",
+      "kind": "uart_device"
+    }
+  ],
+  "series": "A"
+}

@@ -1,0 +1,26 @@
+{
+  "allocation": {
+    "added": [],
+    "changed": [],
+    "removed": []
+  },
+  "components_only_in_a": [],
+  "components_only_in_b": [],
+  "incumbents": "watchy_v1_draft",
+  "minimal_disturbance_violations": [],
+  "stamp_a": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  },
+  "stamp_b": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  },
+  "terminals": []
+}

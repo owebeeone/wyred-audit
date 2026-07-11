@@ -1,0 +1,27 @@
+{
+  "artifact": "watchy_v1_revb",
+  "child_stamp": {
+    "locks": {
+      "external-interface": 1,
+      "firmware-facing": 1
+    },
+    "series": "B"
+  },
+  "forked_from": "watchy_v1_reva",
+  "legal_fork_codes": [],
+  "new_series": "B",
+  "ok": true,
+  "parent_stamp": {
+    "locks": {
+      "external-interface": 1,
+      "firmware-facing": 1
+    },
+    "series": "A"
+  },
+  "tamper_locked_edit_codes": [
+    "LOCK_VIOLATION"
+  ],
+  "tamper_series_hand_edit_codes": [
+    "SERIES_UNJUSTIFIED"
+  ]
+}

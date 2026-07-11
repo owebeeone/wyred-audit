@@ -1,0 +1,964 @@
+{
+  "allocation": {
+    "entries": [
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn3",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 0
+      },
+      {
+        "chosen_by": "solver",
+        "demand": "accel.int1",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "sticky",
+        "unit": 1
+      },
+      {
+        "chosen_by": "solver",
+        "demand": "accel.int2",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "sticky",
+        "unit": 2
+      },
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn2",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 6
+      },
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn1",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 7
+      },
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn4",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 8
+      },
+      {
+        "chosen_by": "author",
+        "demand": "vsense.tap",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 9
+      },
+      {
+        "chosen_by": "author",
+        "demand": "charger.stat",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 10
+      },
+      {
+        "chosen_by": "author",
+        "demand": "motor.pwm",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 13
+      },
+      {
+        "chosen_by": "author",
+        "demand": "usb.det",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 15
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.mosi",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 23
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.sck",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 24
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.cs",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 25
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.dc",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 26
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.res",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 27
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.busy",
+        "locked_by": null,
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 28
+      }
+    ],
+    "lock_groups": [
+      {
+        "covers": [
+          "connector_pinout"
+        ],
+        "name": "external-interface",
+        "owner": "hw-team",
+        "snapshot": null,
+        "sync_point": "spin-release",
+        "version": 0
+      },
+      {
+        "covers": [
+          "pool_allocation",
+          "pin_map"
+        ],
+        "name": "firmware-facing",
+        "owner": "fw-team",
+        "snapshot": null,
+        "sync_point": "firmware-freeze",
+        "version": 0
+      }
+    ],
+    "solver_version": "ga019-trivial-1"
+  },
+  "bindings": {
+    "battery": "J1"
+  },
+  "bound_parts": {
+    "accel": [
+      {
+        "chosen_by": "author",
+        "part": "BMA423",
+        "refdes": "U6"
+      },
+      {
+        "chosen_by": "author",
+        "part": "10uF",
+        "refdes": "C1"
+      }
+    ],
+    "antenna": [
+      {
+        "chosen_by": "solver",
+        "part": "Antenna_Chip",
+        "refdes": "AE1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "TBD",
+        "refdes": "L1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "TBD",
+        "refdes": "C7"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "TBD",
+        "refdes": "C9"
+      }
+    ],
+    "battery": [
+      {
+        "chosen_by": "solver",
+        "part": "Battery",
+        "refdes": "J1"
+      }
+    ],
+    "btns": [
+      {
+        "chosen_by": "solver",
+        "part": "BTN2",
+        "refdes": "SW1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "BTN1",
+        "refdes": "SW2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "BTN3",
+        "refdes": "SW3"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "BTN4",
+        "refdes": "SW4"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "SR2HARU",
+        "refdes": "U1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "BOOT",
+        "refdes": "TP3"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R4"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R7"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R10"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R11"
+      }
+    ],
+    "charger": [
+      {
+        "chosen_by": "solver",
+        "part": "TP4054",
+        "refdes": "U3"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "10K",
+        "refdes": "R3"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "51K",
+        "refdes": "R5"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R6"
+      }
+    ],
+    "debug": [
+      {
+        "chosen_by": "solver",
+        "part": "TX",
+        "refdes": "TP1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "RX",
+        "refdes": "TP2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "3V3",
+        "refdes": "TP4"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "GND",
+        "refdes": "TP5"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "SCL",
+        "refdes": "TP6"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "SDA",
+        "refdes": "TP7"
+      }
+    ],
+    "display": [
+      {
+        "chosen_by": "author",
+        "part": "FPC24(0.5MM)",
+        "refdes": "J3"
+      },
+      {
+        "chosen_by": "author",
+        "part": "AO3400A",
+        "refdes": "Q3"
+      },
+      {
+        "chosen_by": "author",
+        "part": "47uH 0.5A",
+        "refdes": "L2"
+      },
+      {
+        "chosen_by": "author",
+        "part": "MBR0530",
+        "refdes": "D3"
+      },
+      {
+        "chosen_by": "author",
+        "part": "MBR0530",
+        "refdes": "D4"
+      },
+      {
+        "chosen_by": "author",
+        "part": "MBR0530",
+        "refdes": "D5"
+      },
+      {
+        "chosen_by": "author",
+        "part": "4.7uF/50V",
+        "refdes": "C20"
+      },
+      {
+        "chosen_by": "author",
+        "part": "4.7uF/50V",
+        "refdes": "C21"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C22"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C23"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C24"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C25"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C26"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C27"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C28"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF/50V",
+        "refdes": "C29"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1M",
+        "refdes": "R16"
+      },
+      {
+        "chosen_by": "author",
+        "part": "2.2",
+        "refdes": "R17"
+      },
+      {
+        "chosen_by": "author",
+        "part": "100K",
+        "refdes": "R19"
+      }
+    ],
+    "mcu": [
+      {
+        "chosen_by": "author",
+        "part": "ESP32-S3",
+        "refdes": "U4"
+      },
+      {
+        "chosen_by": "author",
+        "part": "10K",
+        "refdes": "R1"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF",
+        "refdes": "C2"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF",
+        "refdes": "C3"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF",
+        "refdes": "C4"
+      },
+      {
+        "chosen_by": "author",
+        "part": "100nF",
+        "refdes": "C5"
+      },
+      {
+        "chosen_by": "author",
+        "part": "100nF",
+        "refdes": "C6"
+      },
+      {
+        "chosen_by": "author",
+        "part": "10uF",
+        "refdes": "C10"
+      },
+      {
+        "chosen_by": "author",
+        "part": "100nF",
+        "refdes": "C13"
+      },
+      {
+        "chosen_by": "author",
+        "part": "1uF",
+        "refdes": "C15"
+      },
+      {
+        "chosen_by": "author",
+        "part": "10K",
+        "refdes": "R18"
+      },
+      {
+        "chosen_by": "author",
+        "part": "10K",
+        "refdes": "R20"
+      }
+    ],
+    "motor": [
+      {
+        "chosen_by": "solver",
+        "part": "Vibration_Motor",
+        "refdes": "M1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "S8050",
+        "refdes": "Q2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "1K",
+        "refdes": "R13"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "1N4001",
+        "refdes": "D2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100nF",
+        "refdes": "C14"
+      }
+    ],
+    "pmu": [
+      {
+        "chosen_by": "solver",
+        "part": "CJ2301",
+        "refdes": "Q1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "MBR0530",
+        "refdes": "D1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "RT908033",
+        "refdes": "U2"
+      }
+    ],
+    "usb": [
+      {
+        "chosen_by": "solver",
+        "part": "Micro USB",
+        "refdes": "J2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "USBLC6-2P6",
+        "refdes": "U5"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100nF",
+        "refdes": "C12"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "51K",
+        "refdes": "R14"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R15"
+      }
+    ],
+    "vsense": [
+      {
+        "chosen_by": "solver",
+        "part": "100K",
+        "refdes": "R8"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "360K",
+        "refdes": "R9"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "100nF",
+        "refdes": "C11"
+      }
+    ],
+    "x32": [
+      {
+        "chosen_by": "solver",
+        "part": "32.768KHz",
+        "refdes": "Y1"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "18pF",
+        "refdes": "C17"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "18pF",
+        "refdes": "C18"
+      }
+    ],
+    "x40": [
+      {
+        "chosen_by": "solver",
+        "part": "40MHz",
+        "refdes": "Y2"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "22pF",
+        "refdes": "C16"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "22pF",
+        "refdes": "C19"
+      },
+      {
+        "chosen_by": "solver",
+        "part": "TBD",
+        "refdes": "R12"
+      }
+    ]
+  },
+  "connector_pinout": [
+    {
+      "connector": "J1",
+      "function": "BAT+",
+      "locked_by": null,
+      "net": "+BATT",
+      "pin": "1"
+    },
+    {
+      "connector": "J1",
+      "function": "BAT-",
+      "locked_by": null,
+      "net": "GND",
+      "pin": "2"
+    },
+    {
+      "connector": "J1",
+      "function": "MP",
+      "locked_by": null,
+      "net": null,
+      "pin": "3"
+    },
+    {
+      "connector": "J1",
+      "function": "MP",
+      "locked_by": null,
+      "net": null,
+      "pin": "4"
+    },
+    {
+      "connector": "J2",
+      "function": "VBUS",
+      "locked_by": null,
+      "net": "VBUS",
+      "pin": "1"
+    },
+    {
+      "connector": "J2",
+      "function": "D-",
+      "locked_by": null,
+      "net": "usb.DN",
+      "pin": "2"
+    },
+    {
+      "connector": "J2",
+      "function": "D+",
+      "locked_by": null,
+      "net": "usb.DP",
+      "pin": "3"
+    },
+    {
+      "connector": "J2",
+      "function": "ID",
+      "locked_by": null,
+      "net": null,
+      "pin": "4"
+    },
+    {
+      "connector": "J2",
+      "function": "GND",
+      "locked_by": null,
+      "net": "GND",
+      "pin": "5"
+    },
+    {
+      "connector": "J2",
+      "function": "Shield",
+      "locked_by": null,
+      "net": null,
+      "pin": "6"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_1",
+      "locked_by": null,
+      "net": null,
+      "pin": "1"
+    },
+    {
+      "connector": "J3",
+      "function": "RES#",
+      "locked_by": null,
+      "net": "display.res.0.io",
+      "pin": "10"
+    },
+    {
+      "connector": "J3",
+      "function": "D/C#",
+      "locked_by": null,
+      "net": "display.dc.0.io",
+      "pin": "11"
+    },
+    {
+      "connector": "J3",
+      "function": "CS#",
+      "locked_by": null,
+      "net": "display.cs.0.io",
+      "pin": "12"
+    },
+    {
+      "connector": "J3",
+      "function": "SCLK",
+      "locked_by": null,
+      "net": "display.sck.0.io",
+      "pin": "13"
+    },
+    {
+      "connector": "J3",
+      "function": "SDIN",
+      "locked_by": null,
+      "net": "display.mosi.0.io",
+      "pin": "14"
+    },
+    {
+      "connector": "J3",
+      "function": "VDDIO",
+      "locked_by": null,
+      "net": "+3V3",
+      "pin": "15"
+    },
+    {
+      "connector": "J3",
+      "function": "VDD",
+      "locked_by": null,
+      "net": "+3V3",
+      "pin": "16"
+    },
+    {
+      "connector": "J3",
+      "function": "GND",
+      "locked_by": null,
+      "net": "GND",
+      "pin": "17"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_18",
+      "locked_by": null,
+      "net": "display.PANEL_18",
+      "pin": "18"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_19",
+      "locked_by": null,
+      "net": null,
+      "pin": "19"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_2",
+      "locked_by": null,
+      "net": "display.GDR",
+      "pin": "2"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_20",
+      "locked_by": null,
+      "net": "display.PANEL_20",
+      "pin": "20"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_21",
+      "locked_by": null,
+      "net": "display.PREVGH",
+      "pin": "21"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_22",
+      "locked_by": null,
+      "net": "display.PANEL_22",
+      "pin": "22"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_23",
+      "locked_by": null,
+      "net": "display.PREVGL",
+      "pin": "23"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_24",
+      "locked_by": null,
+      "net": "display.PANEL_24",
+      "pin": "24"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_3",
+      "locked_by": null,
+      "net": "display.RESE",
+      "pin": "3"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_4",
+      "locked_by": null,
+      "net": null,
+      "pin": "4"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_5",
+      "locked_by": null,
+      "net": "display.PANEL_5",
+      "pin": "5"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_6",
+      "locked_by": null,
+      "net": null,
+      "pin": "6"
+    },
+    {
+      "connector": "J3",
+      "function": "Pin_7",
+      "locked_by": null,
+      "net": null,
+      "pin": "7"
+    },
+    {
+      "connector": "J3",
+      "function": "GND",
+      "locked_by": null,
+      "net": "GND",
+      "pin": "8"
+    },
+    {
+      "connector": "J3",
+      "function": "BUSY",
+      "locked_by": null,
+      "net": "display.busy.0.io",
+      "pin": "9"
+    }
+  ],
+  "series": "A",
+  "solver_version": "ga019-trivial-1",
+  "stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  },
+  "wiring": [
+    {
+      "demand": "btns.btn3",
+      "net": "btns.btn3.0.io",
+      "node": "U4.5",
+      "pool": "mcu.gpios",
+      "unit": 0
+    },
+    {
+      "demand": "accel.int1",
+      "net": "accel.int1.0.io",
+      "node": "U4.6",
+      "pool": "mcu.gpios",
+      "unit": 1
+    },
+    {
+      "demand": "accel.int2",
+      "net": "accel.int2.0.io",
+      "node": "U4.7",
+      "pool": "mcu.gpios",
+      "unit": 2
+    },
+    {
+      "demand": "btns.btn2",
+      "net": "btns.btn2.0.io",
+      "node": "U4.11",
+      "pool": "mcu.gpios",
+      "unit": 6
+    },
+    {
+      "demand": "btns.btn1",
+      "net": "btns.btn1.0.io",
+      "node": "U4.12",
+      "pool": "mcu.gpios",
+      "unit": 7
+    },
+    {
+      "demand": "btns.btn4",
+      "net": "btns.btn4.0.io",
+      "node": "U4.13",
+      "pool": "mcu.gpios",
+      "unit": 8
+    },
+    {
+      "demand": "vsense.tap",
+      "net": "vsense.tap.0.io",
+      "node": "U4.14",
+      "pool": "mcu.gpios",
+      "unit": 9
+    },
+    {
+      "demand": "charger.stat",
+      "net": "charger.stat.0.io",
+      "node": "U4.15",
+      "pool": "mcu.gpios",
+      "unit": 10
+    },
+    {
+      "demand": "motor.pwm",
+      "net": "motor.pwm.0.io",
+      "node": "U4.23",
+      "pool": "mcu.gpios",
+      "unit": 13
+    },
+    {
+      "demand": "usb.det",
+      "net": "usb.det.0.io",
+      "node": "U4.27",
+      "pool": "mcu.gpios",
+      "unit": 15
+    },
+    {
+      "demand": "display.mosi",
+      "net": "display.mosi.0.io",
+      "node": "U4.36",
+      "pool": "mcu.gpios",
+      "unit": 23
+    },
+    {
+      "demand": "display.sck",
+      "net": "display.sck.0.io",
+      "node": "U4.37",
+      "pool": "mcu.gpios",
+      "unit": 24
+    },
+    {
+      "demand": "display.cs",
+      "net": "display.cs.0.io",
+      "node": "U4.38",
+      "pool": "mcu.gpios",
+      "unit": 25
+    },
+    {
+      "demand": "display.dc",
+      "net": "display.dc.0.io",
+      "node": "U4.39",
+      "pool": "mcu.gpios",
+      "unit": 26
+    },
+    {
+      "demand": "display.res",
+      "net": "display.res.0.io",
+      "node": "U4.40",
+      "pool": "mcu.gpios",
+      "unit": 27
+    },
+    {
+      "demand": "display.busy",
+      "net": "display.busy.0.io",
+      "node": "U4.41",
+      "pool": "mcu.gpios",
+      "unit": 28
+    }
+  ]
+}

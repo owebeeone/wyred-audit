@@ -1,0 +1,2528 @@
+{
+  "allocations": [
+    {
+      "chosen_by": "author",
+      "demand": "btns.btn3",
+      "locked_by": "firmware-facing@1",
+      "net": "btns.btn3.0.io",
+      "node": "U4.5",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 0
+    },
+    {
+      "chosen_by": "author",
+      "demand": "btns.btn2",
+      "locked_by": "firmware-facing@1",
+      "net": "btns.btn2.0.io",
+      "node": "U4.11",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 6
+    },
+    {
+      "chosen_by": "author",
+      "demand": "btns.btn1",
+      "locked_by": "firmware-facing@1",
+      "net": "btns.btn1.0.io",
+      "node": "U4.12",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 7
+    },
+    {
+      "chosen_by": "author",
+      "demand": "btns.btn4",
+      "locked_by": "firmware-facing@1",
+      "net": "btns.btn4.0.io",
+      "node": "U4.13",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 8
+    },
+    {
+      "chosen_by": "author",
+      "demand": "vsense.tap",
+      "locked_by": "firmware-facing@1",
+      "net": "vsense.tap.0.io",
+      "node": "U4.14",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 9
+    },
+    {
+      "chosen_by": "author",
+      "demand": "charger.stat",
+      "locked_by": "firmware-facing@1",
+      "net": "charger.stat.0.io",
+      "node": "U4.15",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 10
+    },
+    {
+      "chosen_by": "author",
+      "demand": "accel.int2",
+      "locked_by": "firmware-facing@1",
+      "net": "accel.int2.0.io",
+      "node": "U4.18",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 11
+    },
+    {
+      "chosen_by": "author",
+      "demand": "accel.int1",
+      "locked_by": "firmware-facing@1",
+      "net": "accel.int1.0.io",
+      "node": "U4.19",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 12
+    },
+    {
+      "chosen_by": "author",
+      "demand": "motor.pwm",
+      "locked_by": "firmware-facing@1",
+      "net": "motor.pwm.0.io",
+      "node": "U4.23",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 13
+    },
+    {
+      "chosen_by": "author",
+      "demand": "usb.det",
+      "locked_by": "firmware-facing@1",
+      "net": "usb.det.0.io",
+      "node": "U4.27",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 15
+    },
+    {
+      "chosen_by": "author",
+      "demand": "display.mosi",
+      "locked_by": "firmware-facing@1",
+      "net": "display.mosi.0.io",
+      "node": "U4.36",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 23
+    },
+    {
+      "chosen_by": "author",
+      "demand": "display.sck",
+      "locked_by": "firmware-facing@1",
+      "net": "display.sck.0.io",
+      "node": "U4.37",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 24
+    },
+    {
+      "chosen_by": "author",
+      "demand": "display.cs",
+      "locked_by": "firmware-facing@1",
+      "net": "display.cs.0.io",
+      "node": "U4.38",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 25
+    },
+    {
+      "chosen_by": "author",
+      "demand": "display.dc",
+      "locked_by": "firmware-facing@1",
+      "net": "display.dc.0.io",
+      "node": "U4.39",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 26
+    },
+    {
+      "chosen_by": "author",
+      "demand": "display.res",
+      "locked_by": "firmware-facing@1",
+      "net": "display.res.0.io",
+      "node": "U4.40",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 27
+    },
+    {
+      "chosen_by": "author",
+      "demand": "display.busy",
+      "locked_by": "firmware-facing@1",
+      "net": "display.busy.0.io",
+      "node": "U4.41",
+      "pool": "mcu.gpios",
+      "state": "pinned",
+      "unit": 28
+    }
+  ],
+  "artifact": "watchy_v1_reva",
+  "components": [
+    {
+      "authored": true,
+      "kind": "antenna",
+      "l1_role": "antenna",
+      "refdes": "AE1",
+      "terminals": [
+        {
+          "function": "FEED",
+          "name": "1",
+          "net": "antenna.ANT_FEED",
+          "role": "passive"
+        },
+        {
+          "function": "GND",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "Antenna_Chip"
+    },
+    {
+      "authored": false,
+      "for_demand": "accel",
+      "kind": "capacitor",
+      "refdes": "C1",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "10uF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C10",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "10uF"
+    },
+    {
+      "authored": false,
+      "for_demand": "vsense",
+      "kind": "capacitor",
+      "refdes": "C11",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "vsense.tap.0.io",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "for_demand": "usb",
+      "kind": "capacitor",
+      "refdes": "C12",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "VBUS",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C13",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "mcu.VDD_SPI",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "for_demand": "motor",
+      "kind": "capacitor",
+      "refdes": "C14",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "motor.VIB_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C15",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "mcu.VDD_SPI",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF"
+    },
+    {
+      "authored": false,
+      "for_demand": "x40",
+      "kind": "capacitor",
+      "refdes": "C16",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "x40.40M_P",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "22pF"
+    },
+    {
+      "authored": false,
+      "for_demand": "x32",
+      "kind": "capacitor",
+      "refdes": "C17",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "mcu.osc_rtc.xp",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "18pF"
+    },
+    {
+      "authored": false,
+      "for_demand": "x32",
+      "kind": "capacitor",
+      "refdes": "C18",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "mcu.osc_rtc.xn",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "18pF"
+    },
+    {
+      "authored": false,
+      "for_demand": "x40",
+      "kind": "capacitor",
+      "refdes": "C19",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "mcu.osc_main.xn",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "22pF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C2",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "btns.en.en",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C20",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "4.7uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C21",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.FLY",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "display.BOOST_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "4.7uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C22",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.PREVGH",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C23",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.PANEL_5",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C24",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.PANEL_18",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C25",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.PANEL_20",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C26",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.PANEL_22",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C27",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.PANEL_24",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C28",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "capacitor",
+      "refdes": "C29",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "GND",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "display.PREVGL",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF/50V"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C3",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C4",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1uF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C5",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "capacitor",
+      "refdes": "C6",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": false,
+      "for_demand": "antenna",
+      "kind": "capacitor",
+      "refdes": "C7",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "antenna.ANT_FEED",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": false,
+      "for_demand": "antenna",
+      "kind": "capacitor",
+      "refdes": "C9",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "antenna.feed.rf",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": true,
+      "kind": "diode",
+      "l1_role": "pmu",
+      "refdes": "D1",
+      "terminals": [
+        {
+          "function": "K",
+          "name": "1",
+          "net": "pmu.VSYS",
+          "role": "passive"
+        },
+        {
+          "function": "A",
+          "name": "2",
+          "net": "VBUS",
+          "role": "power_in"
+        }
+      ],
+      "value": "MBR0530"
+    },
+    {
+      "authored": false,
+      "for_demand": "motor",
+      "kind": "diode",
+      "refdes": "D2",
+      "terminals": [
+        {
+          "function": "K",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "A",
+          "name": "2",
+          "net": "motor.VIB_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "1N4001"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "diode",
+      "refdes": "D3",
+      "terminals": [
+        {
+          "function": "K",
+          "name": "1",
+          "net": "display.FLY",
+          "role": "passive"
+        },
+        {
+          "function": "A",
+          "name": "2",
+          "net": "display.PREVGL",
+          "role": "passive"
+        }
+      ],
+      "value": "MBR0530"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "diode",
+      "refdes": "D4",
+      "terminals": [
+        {
+          "function": "K",
+          "name": "1",
+          "net": "GND",
+          "role": "passive"
+        },
+        {
+          "function": "A",
+          "name": "2",
+          "net": "display.FLY",
+          "role": "passive"
+        }
+      ],
+      "value": "MBR0530"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "diode",
+      "refdes": "D5",
+      "terminals": [
+        {
+          "function": "K",
+          "name": "1",
+          "net": "display.PREVGH",
+          "role": "passive"
+        },
+        {
+          "function": "A",
+          "name": "2",
+          "net": "display.BOOST_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "MBR0530"
+    },
+    {
+      "authored": true,
+      "kind": "connector",
+      "l1_role": "battery",
+      "refdes": "J1",
+      "terminals": [
+        {
+          "function": "BAT+",
+          "name": "1",
+          "net": "+BATT",
+          "role": "power_out"
+        },
+        {
+          "function": "BAT-",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "MP",
+          "name": "3",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "MP",
+          "name": "4",
+          "net": null,
+          "role": "passive"
+        }
+      ],
+      "value": "Battery"
+    },
+    {
+      "authored": true,
+      "kind": "connector",
+      "l1_role": "usb",
+      "refdes": "J2",
+      "terminals": [
+        {
+          "function": "VBUS",
+          "name": "1",
+          "net": "VBUS",
+          "role": "power_out"
+        },
+        {
+          "function": "D-",
+          "name": "2",
+          "net": "usb.DN",
+          "role": "passive"
+        },
+        {
+          "function": "D+",
+          "name": "3",
+          "net": "usb.DP",
+          "role": "passive"
+        },
+        {
+          "function": "ID",
+          "name": "4",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "GND",
+          "name": "5",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "Shield",
+          "name": "6",
+          "net": null,
+          "role": "passive"
+        }
+      ],
+      "value": "Micro USB"
+    },
+    {
+      "authored": true,
+      "kind": "connector",
+      "l1_role": "display",
+      "refdes": "J3",
+      "terminals": [
+        {
+          "function": "Pin_1",
+          "name": "1",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "Pin_2",
+          "name": "2",
+          "net": "display.GDR",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_3",
+          "name": "3",
+          "net": "display.RESE",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_4",
+          "name": "4",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "Pin_5",
+          "name": "5",
+          "net": "display.PANEL_5",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_6",
+          "name": "6",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "Pin_7",
+          "name": "7",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "GND",
+          "name": "8",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "BUSY",
+          "name": "9",
+          "net": "display.busy.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "RES#",
+          "name": "10",
+          "net": "display.res.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "D/C#",
+          "name": "11",
+          "net": "display.dc.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "CS#",
+          "name": "12",
+          "net": "display.cs.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "SCLK",
+          "name": "13",
+          "net": "display.sck.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "SDIN",
+          "name": "14",
+          "net": "display.mosi.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "VDDIO",
+          "name": "15",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "VDD",
+          "name": "16",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "GND",
+          "name": "17",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "Pin_18",
+          "name": "18",
+          "net": "display.PANEL_18",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_19",
+          "name": "19",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "Pin_20",
+          "name": "20",
+          "net": "display.PANEL_20",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_21",
+          "name": "21",
+          "net": "display.PREVGH",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_22",
+          "name": "22",
+          "net": "display.PANEL_22",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_23",
+          "name": "23",
+          "net": "display.PREVGL",
+          "role": "passive"
+        },
+        {
+          "function": "Pin_24",
+          "name": "24",
+          "net": "display.PANEL_24",
+          "role": "passive"
+        }
+      ],
+      "value": "FPC24(0.5MM)"
+    },
+    {
+      "authored": false,
+      "for_demand": "antenna",
+      "kind": "inductor",
+      "refdes": "L1",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "antenna.ANT_FEED",
+          "role": "passive"
+        },
+        {
+          "function": "LNA_IN",
+          "name": "2",
+          "net": "antenna.feed.rf",
+          "role": "passive"
+        }
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "inductor",
+      "refdes": "L2",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.BOOST_SW",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "47uH 0.5A"
+    },
+    {
+      "authored": true,
+      "kind": "motor",
+      "l1_role": "motor",
+      "refdes": "M1",
+      "terminals": [
+        {
+          "function": "+",
+          "name": "1",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "-",
+          "name": "2",
+          "net": "motor.VIB_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "Vibration_Motor"
+    },
+    {
+      "authored": true,
+      "kind": "mosfet",
+      "l1_role": "pmu",
+      "refdes": "Q1",
+      "terminals": [
+        {
+          "function": "G",
+          "name": "1",
+          "net": "VBUS",
+          "role": "signal"
+        },
+        {
+          "function": "S",
+          "name": "2",
+          "net": "pmu.VSYS",
+          "role": "passive"
+        },
+        {
+          "function": "D",
+          "name": "3",
+          "net": "+BATT",
+          "role": "power_in"
+        }
+      ],
+      "value": "CJ2301"
+    },
+    {
+      "authored": false,
+      "for_demand": "motor",
+      "kind": "transistor",
+      "refdes": "Q2",
+      "terminals": [
+        {
+          "function": "B",
+          "name": "1",
+          "net": "motor.VIB_B",
+          "role": "signal"
+        },
+        {
+          "function": "E",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "C",
+          "name": "3",
+          "net": "motor.VIB_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "S8050"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "mosfet",
+      "refdes": "Q3",
+      "terminals": [
+        {
+          "function": "G",
+          "name": "1",
+          "net": "display.GDR",
+          "role": "signal"
+        },
+        {
+          "function": "S",
+          "name": "2",
+          "net": "display.RESE",
+          "role": "passive"
+        },
+        {
+          "function": "D",
+          "name": "3",
+          "net": "display.BOOST_SW",
+          "role": "passive"
+        }
+      ],
+      "value": "AO3400A"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "resistor",
+      "refdes": "R1",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "btns.en.en",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "10K"
+    },
+    {
+      "authored": false,
+      "for_demand": "btns",
+      "kind": "resistor",
+      "refdes": "R10",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "btns.btn3.0.io",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "btns",
+      "kind": "resistor",
+      "refdes": "R11",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "btns.btn4.0.io",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "x40",
+      "kind": "resistor",
+      "refdes": "R12",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "mcu.osc_main.xp",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "x40.40M_P",
+          "role": "passive"
+        }
+      ],
+      "value": "TBD"
+    },
+    {
+      "authored": false,
+      "for_demand": "motor",
+      "kind": "resistor",
+      "refdes": "R13",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "motor.VIB_B",
+          "role": "passive"
+        },
+        {
+          "function": "VIB_PWM",
+          "name": "2",
+          "net": "motor.pwm.0.io",
+          "role": "signal"
+        }
+      ],
+      "value": "1K"
+    },
+    {
+      "authored": false,
+      "for_demand": "usb",
+      "kind": "resistor",
+      "refdes": "R14",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "VBUS",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "usb.det.0.io",
+          "role": "passive"
+        }
+      ],
+      "value": "51K"
+    },
+    {
+      "authored": false,
+      "for_demand": "usb",
+      "kind": "resistor",
+      "refdes": "R15",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "usb.det.0.io",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "resistor",
+      "refdes": "R16",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "display.GDR",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "1M"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "resistor",
+      "refdes": "R17",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "GND",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "display.RESE",
+          "role": "passive"
+        }
+      ],
+      "value": "2.2"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "resistor",
+      "refdes": "R18",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "I2C0_SDA",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "10K"
+    },
+    {
+      "authored": false,
+      "for_demand": "display",
+      "kind": "resistor",
+      "refdes": "R19",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+3V3",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "display.res.0.io",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "usb",
+      "kind": "resistor",
+      "refdes": "R2",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "VBUS",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "mcu",
+      "kind": "resistor",
+      "refdes": "R20",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "I2C0_SCL",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "10K"
+    },
+    {
+      "authored": false,
+      "for_demand": "charger",
+      "kind": "resistor",
+      "refdes": "R3",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "GND",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "charger.PROG",
+          "role": "passive"
+        }
+      ],
+      "value": "10K"
+    },
+    {
+      "authored": false,
+      "for_demand": "btns",
+      "kind": "resistor",
+      "refdes": "R4",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "btns.btn1.0.io",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "charger",
+      "kind": "resistor",
+      "refdes": "R5",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "VBUS",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "charger.stat.0.io",
+          "role": "passive"
+        }
+      ],
+      "value": "51K"
+    },
+    {
+      "authored": false,
+      "for_demand": "charger",
+      "kind": "resistor",
+      "refdes": "R6",
+      "terminals": [
+        {
+          "function": "STAT",
+          "name": "1",
+          "net": "charger.stat.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "charger.U3_STAT",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "btns",
+      "kind": "resistor",
+      "refdes": "R7",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "btns.btn2.0.io",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "+3V3",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "vsense",
+      "kind": "resistor",
+      "refdes": "R8",
+      "terminals": [
+        {
+          "function": "",
+          "name": "1",
+          "net": "+BATT",
+          "role": "passive"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "vsense.tap.0.io",
+          "role": "passive"
+        }
+      ],
+      "value": "100K"
+    },
+    {
+      "authored": false,
+      "for_demand": "vsense",
+      "kind": "resistor",
+      "refdes": "R9",
+      "terminals": [
+        {
+          "function": "ADC",
+          "name": "1",
+          "net": "vsense.tap.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "360K"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "l1_role": "btns",
+      "refdes": "SW1",
+      "terminals": [
+        {
+          "function": "A",
+          "name": "1",
+          "net": "btns.btn2.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "B",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "BTN2"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "l1_role": "btns",
+      "refdes": "SW2",
+      "terminals": [
+        {
+          "function": "A",
+          "name": "1",
+          "net": "btns.btn1.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "B",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "BTN1"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "l1_role": "btns",
+      "refdes": "SW3",
+      "terminals": [
+        {
+          "function": "A",
+          "name": "1",
+          "net": "btns.btn3.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "B",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "BTN3"
+    },
+    {
+      "authored": true,
+      "kind": "switch",
+      "l1_role": "btns",
+      "refdes": "SW4",
+      "terminals": [
+        {
+          "function": "A",
+          "name": "1",
+          "net": "btns.btn4.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "B",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "BTN4"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "debug",
+      "refdes": "TP1",
+      "terminals": [
+        {
+          "function": "TX",
+          "name": "1",
+          "net": "debug.prog.tx",
+          "role": "signal"
+        }
+      ],
+      "value": "TX"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "debug",
+      "refdes": "TP2",
+      "terminals": [
+        {
+          "function": "RX",
+          "name": "1",
+          "net": "debug.prog.rx",
+          "role": "signal"
+        }
+      ],
+      "value": "RX"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "btns",
+      "refdes": "TP3",
+      "terminals": [
+        {
+          "function": "BOOT",
+          "name": "1",
+          "net": "btns.btn3.0.io",
+          "role": "passive"
+        }
+      ],
+      "value": "BOOT"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "debug",
+      "refdes": "TP4",
+      "terminals": [
+        {
+          "function": "3V3",
+          "name": "1",
+          "net": "+3V3",
+          "role": "power_in"
+        }
+      ],
+      "value": "3V3"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "debug",
+      "refdes": "TP5",
+      "terminals": [
+        {
+          "function": "GND",
+          "name": "1",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "GND"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "debug",
+      "refdes": "TP6",
+      "terminals": [
+        {
+          "function": "SCL",
+          "name": "1",
+          "net": "I2C0_SCL",
+          "role": "signal"
+        }
+      ],
+      "value": "SCL"
+    },
+    {
+      "authored": true,
+      "kind": "test_point",
+      "l1_role": "debug",
+      "refdes": "TP7",
+      "terminals": [
+        {
+          "function": "SDA",
+          "name": "1",
+          "net": "I2C0_SDA",
+          "role": "signal"
+        }
+      ],
+      "value": "SDA"
+    },
+    {
+      "authored": true,
+      "kind": "supervisor",
+      "l1_role": "btns",
+      "refdes": "U1",
+      "terminals": [
+        {
+          "function": "VSS",
+          "name": "1",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "~SR1",
+          "name": "2",
+          "net": "btns.btn2.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "~RST",
+          "name": "3",
+          "net": "btns.en.en",
+          "role": "signal"
+        },
+        {
+          "function": "NC",
+          "name": "4",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "~SR0",
+          "name": "5",
+          "net": "btns.btn3.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "VCC",
+          "name": "6",
+          "net": "+3V3",
+          "role": "power_in"
+        }
+      ],
+      "value": "SR2HARU"
+    },
+    {
+      "authored": true,
+      "kind": "ldo",
+      "l1_role": "pmu",
+      "refdes": "U2",
+      "terminals": [
+        {
+          "function": "VIN",
+          "name": "1",
+          "net": "pmu.VSYS",
+          "role": "power_in"
+        },
+        {
+          "function": "GND",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "EN",
+          "name": "3",
+          "net": "pmu.VSYS",
+          "role": "signal"
+        },
+        {
+          "function": "NC",
+          "name": "4",
+          "net": null,
+          "role": "passive"
+        },
+        {
+          "function": "VOUT",
+          "name": "5",
+          "net": "+3V3",
+          "role": "power_out"
+        }
+      ],
+      "value": "RT908033"
+    },
+    {
+      "authored": true,
+      "kind": "charger",
+      "l1_role": "charger",
+      "refdes": "U3",
+      "terminals": [
+        {
+          "function": "STAT",
+          "name": "1",
+          "net": "charger.U3_STAT",
+          "role": "signal"
+        },
+        {
+          "function": "VSS",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "VBAT",
+          "name": "3",
+          "net": "+BATT",
+          "role": "power_out"
+        },
+        {
+          "function": "VDD",
+          "name": "4",
+          "net": "VBUS",
+          "role": "power_in"
+        },
+        {
+          "function": "PROG",
+          "name": "5",
+          "net": "charger.PROG",
+          "role": "passive"
+        }
+      ],
+      "value": "TP4054"
+    },
+    {
+      "authored": true,
+      "kind": "mcu",
+      "l1_role": "mcu",
+      "refdes": "U4",
+      "terminals": [
+        {
+          "function": "VDD3P3",
+          "name": "2",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "VDD3P3",
+          "name": "3",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "VDD3P3_RTC",
+          "name": "20",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "VDD3P3_CPU",
+          "name": "46",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "VDDA",
+          "name": "55",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "VDDA",
+          "name": "56",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "GND",
+          "name": "57",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "VDD_SPI",
+          "name": "29",
+          "net": "mcu.VDD_SPI",
+          "role": "power_out"
+        },
+        {
+          "function": "LNA_IN/RF",
+          "name": "1",
+          "net": "antenna.feed.rf",
+          "role": "signal"
+        },
+        {
+          "function": "CHIP_PU/RESET",
+          "name": "4",
+          "net": "btns.en.en",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO11/SCL",
+          "name": "16",
+          "net": "I2C0_SCL",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO12/SDA",
+          "name": "17",
+          "net": "I2C0_SDA",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO19/USB_D-",
+          "name": "25",
+          "net": "usb.data.dm",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO20/USB_D+",
+          "name": "26",
+          "net": "usb.data.dp",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO15/XTAL_32K_P",
+          "name": "21",
+          "net": "mcu.osc_rtc.xp",
+          "role": "passive"
+        },
+        {
+          "function": "GPIO16/XTAL_32K_N",
+          "name": "22",
+          "net": "mcu.osc_rtc.xn",
+          "role": "passive"
+        },
+        {
+          "function": "XTAL_P",
+          "name": "54",
+          "net": "mcu.osc_main.xp",
+          "role": "passive"
+        },
+        {
+          "function": "XTAL_N",
+          "name": "53",
+          "net": "mcu.osc_main.xn",
+          "role": "passive"
+        },
+        {
+          "function": "U0TXD/GPIO43",
+          "name": "49",
+          "net": "debug.prog.tx",
+          "role": "signal"
+        },
+        {
+          "function": "U0RXD/GPIO44",
+          "name": "50",
+          "net": "debug.prog.rx",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO0",
+          "name": "5",
+          "net": "btns.btn3.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO1",
+          "name": "6",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO2",
+          "name": "7",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO3",
+          "name": "8",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO4",
+          "name": "9",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO5",
+          "name": "10",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO6",
+          "name": "11",
+          "net": "btns.btn2.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO7",
+          "name": "12",
+          "net": "btns.btn1.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO8",
+          "name": "13",
+          "net": "btns.btn4.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO9",
+          "name": "14",
+          "net": "vsense.tap.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO10",
+          "name": "15",
+          "net": "charger.stat.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO13",
+          "name": "18",
+          "net": "accel.int2.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO14",
+          "name": "19",
+          "net": "accel.int1.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO17",
+          "name": "23",
+          "net": "motor.pwm.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO18",
+          "name": "24",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO21",
+          "name": "27",
+          "net": "usb.det.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO26",
+          "name": "28",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO27",
+          "name": "30",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO28",
+          "name": "31",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO29",
+          "name": "32",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO30",
+          "name": "33",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO31",
+          "name": "34",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO32",
+          "name": "35",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO48",
+          "name": "36",
+          "net": "display.mosi.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO47",
+          "name": "37",
+          "net": "display.sck.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO33",
+          "name": "38",
+          "net": "display.cs.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO34",
+          "name": "39",
+          "net": "display.dc.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO35",
+          "name": "40",
+          "net": "display.res.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO36",
+          "name": "41",
+          "net": "display.busy.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "GPIO37",
+          "name": "42",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO38",
+          "name": "43",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO39",
+          "name": "44",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO40",
+          "name": "45",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO41",
+          "name": "47",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO42",
+          "name": "48",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO45",
+          "name": "51",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "GPIO46",
+          "name": "52",
+          "net": null,
+          "role": "signal"
+        }
+      ],
+      "value": "ESP32-S3"
+    },
+    {
+      "authored": true,
+      "kind": "usb_protection",
+      "l1_role": "usb",
+      "refdes": "U5",
+      "terminals": [
+        {
+          "function": "I/O1",
+          "name": "1",
+          "net": "usb.data.dp",
+          "role": "signal"
+        },
+        {
+          "function": "GND",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "I/O2",
+          "name": "3",
+          "net": "usb.data.dm",
+          "role": "signal"
+        },
+        {
+          "function": "I/O2",
+          "name": "4",
+          "net": "usb.DN",
+          "role": "passive"
+        },
+        {
+          "function": "VBUS",
+          "name": "5",
+          "net": "VBUS",
+          "role": "power_in"
+        },
+        {
+          "function": "I/O1",
+          "name": "6",
+          "net": "usb.DP",
+          "role": "passive"
+        }
+      ],
+      "value": "USBLC6-2P6"
+    },
+    {
+      "authored": true,
+      "kind": "sensor",
+      "l1_role": "accel",
+      "refdes": "U6",
+      "terminals": [
+        {
+          "function": "SDO",
+          "name": "1",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "SDX",
+          "name": "2",
+          "net": "I2C0_SDA",
+          "role": "signal"
+        },
+        {
+          "function": "VDDIO",
+          "name": "3",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "ASDA",
+          "name": "4",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "INT1",
+          "name": "5",
+          "net": "accel.int1.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "INT2",
+          "name": "6",
+          "net": "accel.int2.0.io",
+          "role": "signal"
+        },
+        {
+          "function": "VDD",
+          "name": "7",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "GNDIO",
+          "name": "8",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "GND",
+          "name": "9",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "CSB",
+          "name": "10",
+          "net": "+3V3",
+          "role": "power_in"
+        },
+        {
+          "function": "ASCL",
+          "name": "11",
+          "net": null,
+          "role": "signal"
+        },
+        {
+          "function": "SCX",
+          "name": "12",
+          "net": "I2C0_SCL",
+          "role": "signal"
+        }
+      ],
+      "value": "BMA423"
+    },
+    {
+      "authored": true,
+      "kind": "crystal",
+      "l1_role": "x32",
+      "refdes": "Y1",
+      "terminals": [
+        {
+          "function": "X1",
+          "name": "1",
+          "net": "mcu.osc_rtc.xp",
+          "role": "passive"
+        },
+        {
+          "function": "X2",
+          "name": "2",
+          "net": "mcu.osc_rtc.xn",
+          "role": "passive"
+        }
+      ],
+      "value": "32.768KHz"
+    },
+    {
+      "authored": true,
+      "kind": "crystal",
+      "l1_role": "x40",
+      "refdes": "Y2",
+      "terminals": [
+        {
+          "function": "X1",
+          "name": "1",
+          "net": "x40.40M_P",
+          "role": "passive"
+        },
+        {
+          "function": "GND",
+          "name": "2",
+          "net": "GND",
+          "role": "ground"
+        },
+        {
+          "function": "X2",
+          "name": "3",
+          "net": "mcu.osc_main.xn",
+          "role": "passive"
+        },
+        {
+          "function": "GND",
+          "name": "4",
+          "net": "GND",
+          "role": "ground"
+        }
+      ],
+      "value": "40MHz"
+    }
+  ],
+  "path": "pinmap",
+  "solver_version": "ga019-trivial-1",
+  "stamp": {
+    "locks": {
+      "external-interface": 1,
+      "firmware-facing": 1
+    },
+    "series": "A"
+  }
+}

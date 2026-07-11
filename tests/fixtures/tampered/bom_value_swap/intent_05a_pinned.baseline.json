@@ -1,0 +1,24 @@
+{
+  "connector_pinout": [],
+  "groups": {
+    "firmware-facing": {
+      "covers": [
+        "pin_map",
+        "pool_allocation"
+      ],
+      "entries": [
+        {
+          "chosen_by": "author",
+          "demand": "periph.uart",
+          "locked_by": "firmware-facing@1",
+          "pool": "mcu.uarts",
+          "state": "pinned",
+          "unit": 2
+        }
+      ],
+      "version": 1
+    }
+  },
+  "series": "A",
+  "solver_version": "ga019-trivial-1"
+}

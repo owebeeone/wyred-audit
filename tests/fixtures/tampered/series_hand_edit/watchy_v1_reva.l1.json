@@ -1,0 +1,664 @@
+{
+  "allocation": {
+    "entries": [
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn3",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 0
+      },
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn2",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 6
+      },
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn1",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 7
+      },
+      {
+        "chosen_by": "author",
+        "demand": "btns.btn4",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 8
+      },
+      {
+        "chosen_by": "author",
+        "demand": "vsense.tap",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 9
+      },
+      {
+        "chosen_by": "author",
+        "demand": "charger.stat",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 10
+      },
+      {
+        "chosen_by": "author",
+        "demand": "accel.int2",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 11
+      },
+      {
+        "chosen_by": "author",
+        "demand": "accel.int1",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 12
+      },
+      {
+        "chosen_by": "author",
+        "demand": "motor.pwm",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 13
+      },
+      {
+        "chosen_by": "author",
+        "demand": "usb.det",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 15
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.mosi",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 23
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.sck",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 24
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.cs",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 25
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.dc",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 26
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.res",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 27
+      },
+      {
+        "chosen_by": "author",
+        "demand": "display.busy",
+        "locked_by": "firmware-facing@1",
+        "pool": "mcu.gpios",
+        "state": "pinned",
+        "unit": 28
+      }
+    ],
+    "lock_groups": [
+      {
+        "covers": [
+          "connector_pinout"
+        ],
+        "name": "external-interface",
+        "owner": "hw-team",
+        "snapshot": [],
+        "sync_point": "spin-release",
+        "version": 1
+      },
+      {
+        "covers": [
+          "pool_allocation",
+          "pin_map"
+        ],
+        "name": "firmware-facing",
+        "owner": "fw-team",
+        "snapshot": [
+          {
+            "chosen_by": "author",
+            "demand": "btns.btn3",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 0
+          },
+          {
+            "chosen_by": "author",
+            "demand": "btns.btn2",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 6
+          },
+          {
+            "chosen_by": "author",
+            "demand": "btns.btn1",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 7
+          },
+          {
+            "chosen_by": "author",
+            "demand": "btns.btn4",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 8
+          },
+          {
+            "chosen_by": "author",
+            "demand": "vsense.tap",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 9
+          },
+          {
+            "chosen_by": "author",
+            "demand": "charger.stat",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 10
+          },
+          {
+            "chosen_by": "author",
+            "demand": "accel.int2",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 11
+          },
+          {
+            "chosen_by": "author",
+            "demand": "accel.int1",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 12
+          },
+          {
+            "chosen_by": "author",
+            "demand": "motor.pwm",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 13
+          },
+          {
+            "chosen_by": "author",
+            "demand": "usb.det",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 15
+          },
+          {
+            "chosen_by": "author",
+            "demand": "display.mosi",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 23
+          },
+          {
+            "chosen_by": "author",
+            "demand": "display.sck",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 24
+          },
+          {
+            "chosen_by": "author",
+            "demand": "display.cs",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 25
+          },
+          {
+            "chosen_by": "author",
+            "demand": "display.dc",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 26
+          },
+          {
+            "chosen_by": "author",
+            "demand": "display.res",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 27
+          },
+          {
+            "chosen_by": "author",
+            "demand": "display.busy",
+            "locked_by": "firmware-facing@1",
+            "pool": "mcu.gpios",
+            "state": "pinned",
+            "unit": 28
+          }
+        ],
+        "sync_point": "firmware-freeze",
+        "version": 1
+      }
+    ],
+    "solver_version": "ga019-trivial-1"
+  },
+  "attrs": {
+    "pool_spares": {
+      "mcu.gpios": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    "resolutions": {
+      "accel.i2c": "bus:I2C0",
+      "accel.pwr": "rail:+3V3",
+      "antenna.feed": "role:mcu",
+      "btns.en": "role:mcu",
+      "btns.pwr": "rail:+3V3",
+      "charger.vin": "rail:VBUS",
+      "debug.i2c": "bus:I2C0",
+      "debug.prog": "role:mcu",
+      "debug.pwr": "rail:+3V3",
+      "display.pwr": "rail:+3V3",
+      "mcu.osc_main": "role:x40",
+      "mcu.osc_rtc": "role:x32",
+      "mcu.pwr": "rail:+3V3",
+      "motor.pwr": "rail:+3V3",
+      "pmu.vbat": "rail:+BATT",
+      "pmu.vbus": "rail:VBUS",
+      "usb.data": "role:mcu",
+      "usb.pwr": "rail:VBUS",
+      "vsense.src": "rail:+BATT"
+    }
+  },
+  "buses": [
+    {
+      "iface": "i2c",
+      "name": "I2C0"
+    }
+  ],
+  "grounds": [
+    {
+      "name": "GND"
+    }
+  ],
+  "layer": 1,
+  "pools": [
+    {
+      "name": "mcu.gpios",
+      "port_signature": [
+        "io:bidir"
+      ],
+      "provides": "gpio",
+      "role": "mcu",
+      "unit_count": 37
+    }
+  ],
+  "rails": [
+    {
+      "name": "VBUS",
+      "volts": 5.0
+    },
+    {
+      "name": "+BATT",
+      "volts": 3.7
+    },
+    {
+      "name": "+3V3",
+      "volts": 3.3
+    }
+  ],
+  "roles": [
+    {
+      "capabilities": [
+        {
+          "iface": "power",
+          "rail": "+BATT",
+          "volts": 3.7
+        }
+      ],
+      "id": "battery",
+      "kind": "lipo_battery"
+    },
+    {
+      "capabilities": [
+        {
+          "iface": "power",
+          "rail": "VBUS",
+          "volts": 5.0
+        }
+      ],
+      "demands": [
+        {
+          "id": "usb.pwr",
+          "iface": "power",
+          "volts": 5.0
+        },
+        {
+          "id": "usb.data",
+          "iface": "usb"
+        },
+        {
+          "id": "usb.det",
+          "iface": "gpio"
+        }
+      ],
+      "id": "usb",
+      "kind": "usb_port"
+    },
+    {
+      "capabilities": [
+        {
+          "iface": "power",
+          "rail": "+BATT",
+          "volts": 3.7
+        }
+      ],
+      "demands": [
+        {
+          "id": "charger.vin",
+          "iface": "power",
+          "volts": 5.0
+        },
+        {
+          "id": "charger.stat",
+          "iface": "gpio"
+        }
+      ],
+      "id": "charger",
+      "kind": "lipo_charger"
+    },
+    {
+      "capabilities": [
+        {
+          "iface": "power",
+          "rail": "+3V3",
+          "volts": 3.3
+        }
+      ],
+      "demands": [
+        {
+          "id": "pmu.vbus",
+          "iface": "power",
+          "volts": 5.0
+        },
+        {
+          "id": "pmu.vbat",
+          "iface": "power",
+          "volts": 3.7
+        }
+      ],
+      "id": "pmu",
+      "kind": "watchy_pmu"
+    },
+    {
+      "capabilities": [
+        {
+          "iface": "i2c_master"
+        },
+        {
+          "iface": "esp_en"
+        },
+        {
+          "iface": "usb"
+        },
+        {
+          "iface": "rf"
+        },
+        {
+          "iface": "prog_uart"
+        }
+      ],
+      "demands": [
+        {
+          "id": "mcu.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "id": "mcu.osc_main",
+          "iface": "osc40"
+        },
+        {
+          "id": "mcu.osc_rtc",
+          "iface": "osc32"
+        }
+      ],
+      "id": "mcu",
+      "kind": "esp32s3_module"
+    },
+    {
+      "capabilities": [
+        {
+          "iface": "osc40"
+        }
+      ],
+      "id": "x40",
+      "kind": "xtal_40m"
+    },
+    {
+      "capabilities": [
+        {
+          "iface": "osc32"
+        }
+      ],
+      "id": "x32",
+      "kind": "xtal_32k"
+    },
+    {
+      "demands": [
+        {
+          "id": "accel.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "attrs": {
+            "i2c_addr": 24
+          },
+          "bus": "I2C0",
+          "id": "accel.i2c",
+          "iface": "i2c"
+        },
+        {
+          "id": "accel.int1",
+          "iface": "gpio"
+        },
+        {
+          "id": "accel.int2",
+          "iface": "gpio"
+        }
+      ],
+      "id": "accel",
+      "kind": "bma423_accel"
+    },
+    {
+      "demands": [
+        {
+          "id": "btns.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "id": "btns.btn1",
+          "iface": "gpio"
+        },
+        {
+          "id": "btns.btn2",
+          "iface": "gpio"
+        },
+        {
+          "id": "btns.btn3",
+          "iface": "gpio"
+        },
+        {
+          "id": "btns.btn4",
+          "iface": "gpio"
+        },
+        {
+          "id": "btns.en",
+          "iface": "esp_en"
+        }
+      ],
+      "id": "btns",
+      "kind": "watchy_buttons"
+    },
+    {
+      "demands": [
+        {
+          "id": "display.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "id": "display.busy",
+          "iface": "gpio"
+        },
+        {
+          "id": "display.res",
+          "iface": "gpio"
+        },
+        {
+          "id": "display.dc",
+          "iface": "gpio"
+        },
+        {
+          "id": "display.cs",
+          "iface": "gpio"
+        },
+        {
+          "id": "display.sck",
+          "iface": "gpio"
+        },
+        {
+          "id": "display.mosi",
+          "iface": "gpio"
+        }
+      ],
+      "id": "display",
+      "kind": "epaper_spi_display"
+    },
+    {
+      "demands": [
+        {
+          "id": "motor.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "id": "motor.pwm",
+          "iface": "gpio"
+        }
+      ],
+      "id": "motor",
+      "kind": "vibra_motor"
+    },
+    {
+      "demands": [
+        {
+          "id": "vsense.src",
+          "iface": "power",
+          "volts": 3.7
+        },
+        {
+          "id": "vsense.tap",
+          "iface": "gpio"
+        }
+      ],
+      "id": "vsense",
+      "kind": "vbat_sense"
+    },
+    {
+      "demands": [
+        {
+          "id": "antenna.feed",
+          "iface": "rf"
+        }
+      ],
+      "id": "antenna",
+      "kind": "chip_antenna"
+    },
+    {
+      "demands": [
+        {
+          "id": "debug.pwr",
+          "iface": "power",
+          "volts": 3.3
+        },
+        {
+          "id": "debug.prog",
+          "iface": "prog_uart"
+        },
+        {
+          "bus": "I2C0",
+          "id": "debug.i2c",
+          "iface": "i2c"
+        }
+      ],
+      "id": "debug",
+      "kind": "debug_taps"
+    }
+  ],
+  "series": "AZ"
+}

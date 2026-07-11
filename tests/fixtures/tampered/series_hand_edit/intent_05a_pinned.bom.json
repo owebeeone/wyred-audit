@@ -1,0 +1,54 @@
+{
+  "artifact": "intent_05a_pinned",
+  "authored_total": 3,
+  "component_total": 4,
+  "generated_total": 1,
+  "line_items": [
+    {
+      "authored": false,
+      "derived": {
+        "C1": "decoupling for mcu.pwr"
+      },
+      "kind": "capacitor",
+      "qty": 1,
+      "refdes": [
+        "C1"
+      ],
+      "value": "100nF"
+    },
+    {
+      "authored": true,
+      "kind": "mcu",
+      "qty": 1,
+      "refdes": [
+        "U1"
+      ],
+      "value": "MCU-3UART"
+    },
+    {
+      "authored": true,
+      "kind": "source",
+      "qty": 1,
+      "refdes": [
+        "PS1"
+      ],
+      "value": "SRC-3.3V"
+    },
+    {
+      "authored": true,
+      "kind": "uart_device",
+      "qty": 1,
+      "refdes": [
+        "U2"
+      ],
+      "value": "uart-peripheral"
+    }
+  ],
+  "path": "bom",
+  "stamp": {
+    "locks": {
+      "firmware-facing": 1
+    },
+    "series": "A"
+  }
+}

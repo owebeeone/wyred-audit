@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wyred-audit"
+version = "0.1.0"
+description = "wyred-audit — the one-command consumer-side audit tool: rebuild honesty + external-baseline/lifecycle/connlock verification + engine crosscheck over an artifact directory. Port of the consumer-trust half of elecscad ga019 runner.py."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+wyred-audit = "wyred_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
