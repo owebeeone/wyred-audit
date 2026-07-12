@@ -12,8 +12,10 @@ the fixture runs pass --engine-src only: baselines + lifecycle + connlock
 + pinmapdiff/incumbency + the corpus-less FROM-PRIMARIES rebuild +
 crosscheck.
 
-Env overrides: WYRED_ENGINE_SRC, WYRED_HARNESS_SRC (default: the sibling
-checkouts under this repo's parent).
+Env overrides: WYRED_ENGINE_SRC, WYRED_HARNESS_SRC, WYRED_CONTRACT_SRC
+(default: the sibling checkouts under this repo's parent). The runs pass
+--contract-src explicitly so the schema stage is deterministically
+exercised (the two schema_* tamper cases depend on it).
 """
 
 from __future__ import annotations
@@ -27,6 +29,8 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 FIXTURES = HERE / "fixtures"
 ENGINE = os.environ.get("WYRED_ENGINE_SRC", str(REPO.parent / "wyred"))
+CONTRACT = os.environ.get("WYRED_CONTRACT_SRC",
+                          str(REPO.parent / "wyred-contract"))
 
 # tampered case -> the named code(s) that MUST appear in the findings
 EXPECT = {
@@ -40,6 +44,12 @@ EXPECT = {
     "sticky_alloc_moved": ("PINMAPDIFF_DISAGREE",
                            "MINIMAL_DISTURBANCE_NOT_OK"),
     "bom_totals_edit": ("REBUILD_FROM_PRIMARIES",),
+    # shape defects the semantic gates do not classify — caught by the
+    # optional contract schema stage (Step 2.1). The byte-level
+    # from-primaries rebuild also fires, but SCHEMA_INVALID is the code
+    # that proves the schema stage ran and named the shape violation.
+    "schema_bom_missing_qty": ("SCHEMA_INVALID",),
+    "schema_pinmap_net_number": ("SCHEMA_INVALID",),
 }
 
 # tampered case -> code(s) that must NOT appear (the case exists to prove
@@ -58,7 +68,7 @@ def run_audit(tree: Path) -> subprocess.CompletedProcess:
     env["PYTHONDONTWRITEBYTECODE"] = "1"
     return subprocess.run(
         [sys.executable, "-m", "wyred_audit", "--tree", str(tree),
-         "--engine-src", ENGINE],
+         "--engine-src", ENGINE, "--contract-src", CONTRACT],
         env=env, capture_output=True, text=True)
 
 

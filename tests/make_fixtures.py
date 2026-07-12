@@ -157,6 +157,36 @@ def mut_bom_totals_edit(tree: Path) -> None:
     _edit_json(tree / "watchy_v1_reva.bom.json", mutate)
 
 
+def mut_schema_bom_missing_qty(tree: Path) -> None:
+    """Delete `qty` from a BOM line item — a SHAPE violation, not a value
+    one. The contract's bom line_item oneOf requires `qty` in BOTH
+    branches, so this makes the schema stage fire SCHEMA_INVALID at the
+    line item. (The byte-level from-primaries rebuild also fires — a
+    dropped key is a byte change — but only the schema stage NAMES it a
+    shape defect; the acceptance requires SCHEMA_INVALID.)"""
+    def mutate(bom):
+        items = bom["line_items"]
+        assert items and "qty" in items[0], "no BOM line item with a qty"
+        del items[0]["qty"]
+    _edit_json(tree / "watchy_v1_reva.bom.json", mutate)
+
+
+def mut_schema_pinmap_net_number(tree: Path) -> None:
+    """Retype a pin-map terminal `net` from a string to a NUMBER. The
+    contract types pinmap_terminal.net as `string|null`, so the schema
+    stage fires SCHEMA_INVALID (type) at that terminal — a JSON-type
+    defect the identity-comparing semantic gates do not classify. (The
+    from-primaries rebuild also fires on the byte change.)"""
+    def mutate(pm):
+        for comp in pm["components"]:
+            for term in comp["terminals"]:
+                if isinstance(term.get("net"), str):
+                    term["net"] = 42
+                    return
+        raise AssertionError("no string-net terminal to retype")
+    _edit_json(tree / "watchy_v1_reva.pinmap.json", mutate)
+
+
 MUTATIONS = {
     "locked_row_edit": mut_locked_row_edit,
     "series_hand_edit": mut_series_hand_edit,
@@ -166,6 +196,8 @@ MUTATIONS = {
     "pinmapdiff_blanked": mut_pinmapdiff_blanked,
     "sticky_alloc_moved": mut_sticky_alloc_moved,
     "bom_totals_edit": mut_bom_totals_edit,
+    "schema_bom_missing_qty": mut_schema_bom_missing_qty,
+    "schema_pinmap_net_number": mut_schema_pinmap_net_number,
 }
 
 

@@ -39,6 +39,12 @@ field differs.
 | `pinmapdiff_blanked` | `watchy_v1_draft_btn3.pinmapdiff.json` | the ECO diff's `allocation.changed` + `terminals` lists blanked — the engine-lobotomy shape R1 warned about (a differ/incumbency check that reports nothing stays green) | `PINMAPDIFF_DISAGREE` (the audit's independent re-derivation from the two pinmap+alloc pairs disagrees) |
 | `sticky_alloc_moved` | `watchy_v1_draft_btn3.alloc.json` | a SOLVER-chosen sticky allocation moved to a free unit while the pinmapdiff keeps claiming `minimal_disturbance_violations: []` | `PINMAPDIFF_DISAGREE` + `MINIMAL_DISTURBANCE_NOT_OK` (re-derived `_check_incumbency` finds the disturbance; `REBUILD_FROM_PRIMARIES` also fires — pinmap/records no longer rebuild from the tampered alloc) |
 | `bom_totals_edit` | `watchy_v1_reva.bom.json` | `authored_total`/`generated_total` shifted by one — a payload field NO semantic gate reads | `REBUILD_FROM_PRIMARIES` **only** (the runner asserts `CROSSCHECK_FAILED` does NOT fire: the byte-level from-primaries rebuild catches what the semantic differential ignores) |
+| `schema_bom_missing_qty` | `watchy_v1_reva.bom.json` | first BOM line item's `qty` key deleted — a SHAPE defect (the line_item `oneOf` requires `qty` in both branches) | `SCHEMA_INVALID` at `/line_items/0` (the optional contract schema stage, Step 2.1; `REBUILD_FROM_PRIMARIES` also fires on the byte change, but only the schema stage names it a shape defect) |
+| `schema_pinmap_net_number` | `watchy_v1_reva.pinmap.json` | first pin-map terminal `net` retyped from string to the number `42` — a JSON-type defect (`pinmap_terminal.net` is `string\|null`) | `SCHEMA_INVALID` at `/components/0/terminals/0/net` (schema stage; the identity-comparing semantic gates do not classify a type change) |
+
+The two `schema_*` cases exist to exercise the schema stage: they need a
+contract checkout (`--contract-src` / `$WYRED_CONTRACT_SRC` / sibling),
+which `run_fixture_tests.py` supplies.
 
 Regenerating: `make_fixtures.py` deletes and rebuilds `pristine/` and
 `tampered/` wholesale; never hand-edit fixture files.

@@ -52,6 +52,16 @@
                               anchor: a consumer who retains baselines
                               out-of-tree also defeats a coordinated
                               rewrite of artifact + in-tree baseline).
+``... --contract-src <dir>``  every recognized ``*.json`` artifact in the
+                              tree is validated against the wyred-contract
+                              draft-2020-12 schemas (``SCHEMA_INVALID`` per
+                              failing file). The contract's fail-closed
+                              subset validator is IMPORTED as a library
+                              (shared contract infra, not the engine —
+                              schema_stage.py / contractlib.py), defaulting
+                              to ``$WYRED_CONTRACT_SRC`` or the sibling
+                              checkout; warn-and-skip when none is found so
+                              artifact-only audits keep working.
 
 Exit 0 iff every check passed; 1 on any finding; 2 on a setup error.
 The audit process NEVER imports the engine (wyred) and never writes into
@@ -70,6 +80,7 @@ from wyred_audit import incumbency as _incumbency
 from wyred_audit.crosscheckrun import check_crosscheck
 from wyred_audit.harnesslib import AuditSetupError, load_harness
 from wyred_audit.rebuild import check_rebuild, check_rebuild_from_primaries
+from wyred_audit.schema_stage import check_schemas
 
 
 def _report(fails) -> int:
@@ -101,6 +112,11 @@ def main(argv=None) -> int:
                     help="wyred-harness checkout (repo root or harness "
                          "dir); default: $WYRED_HARNESS_SRC or the "
                          "sibling checkout")
+    ap.add_argument("--contract-src", metavar="PATH",
+                    help="wyred-contract checkout (holds schemas/ + "
+                         "tools/validate.py); enables the schema stage. "
+                         "Default: $WYRED_CONTRACT_SRC or the sibling "
+                         "checkout; warn-and-skip when none is found")
     ap.add_argument("--verbose", action="store_true",
                     help="echo subprocess emit output")
     args = ap.parse_args(argv)
@@ -131,8 +147,26 @@ def main(argv=None) -> int:
     print("== wyred-audit: %s (%d artifact set(s), %d retained "
           "baseline(s)) ==" % (tree, n_l1, n_base))
 
-    # ---- (1) rebuild honesty: subprocess re-emit, byte-compare ----------
-    print("\n[1/4] rebuild honesty (re-emit the corpus, byte-compare)")
+    # ---- (1) schema validation: contract draft-2020-12 schemas ----------
+    print("\n[1/5] schema validation (wyred-contract draft-2020-12 "
+          "schemas)")
+    try:
+        schema_res = check_schemas(tree, args.contract_src)
+    except AuditSetupError as exc:
+        print("setup: %s" % exc, file=sys.stderr)
+        return 2
+    if schema_res.skipped:
+        print("WARN schema SKIPPED: %s" % schema_res.reason)
+    else:
+        failures += _report(schema_res.fails)
+        if not schema_res.fails:
+            print("PASS schema: %d/%d artifact(s) valid against the "
+                  "contract schemas (%s)"
+                  % (schema_res.n_valid, schema_res.n_total,
+                     schema_res.contract))
+
+    # ---- (2) rebuild honesty: subprocess re-emit, byte-compare ----------
+    print("\n[2/5] rebuild honesty (re-emit the corpus, byte-compare)")
     if args.corpus_dir:
         try:
             fails = check_rebuild(tree, Path(args.corpus_dir),
@@ -150,7 +184,7 @@ def main(argv=None) -> int:
               "fresh engine emit")
 
     # ---- (2) external baselines / lifecycle / connlock / pinmapdiff -----
-    print("\n[2/4] external-baseline verification (harness re-derivation "
+    print("\n[3/5] external-baseline verification (harness re-derivation "
           "+ tamper gates)")
     fails = _baselines.check_baselines(allocation, schema_l1, tree,
                                        baseline_dir)
@@ -179,7 +213,7 @@ def main(argv=None) -> int:
               "re-derivation (pin-map diff + minimal disturbance)" % n)
 
     # ---- (3) from-primaries rebuild honesty, subprocess -----------------
-    print("\n[3/4] from-primaries rebuild (python3 -m wyred.rebuild "
+    print("\n[4/5] from-primaries rebuild (python3 -m wyred.rebuild "
           "--all)")
     if args.engine_src:
         try:
@@ -198,7 +232,7 @@ def main(argv=None) -> int:
               "primaries")
 
     # ---- (4) the engine's own from-disk differential, subprocess --------
-    print("\n[4/4] engine crosscheck (python3 -m wyred.crosscheck --all)")
+    print("\n[5/5] engine crosscheck (python3 -m wyred.crosscheck --all)")
     if args.engine_src:
         try:
             fails = check_crosscheck(tree, args.engine_src)
